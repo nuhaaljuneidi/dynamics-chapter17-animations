@@ -142,11 +142,11 @@ def case_label(it):
 def write_page(items):
     e = html.escape
     toc = "\n".join(
-        f'        <li><a href="#{it["name"]}">{e(it["title"])}{" – " + e(case_label(it)) if case_label(it) else ""}</a>'
-        f' <span class="slide">Slide {it["slide"]}</span></li>' for it in items)
+        f'        <li><a href="#{it["name"]}">{e(it["title"])}{" – " + e(case_label(it)) if case_label(it) else ""}</a></li>'
+        for it in items)
     sections = "\n".join(f"""    <section id="{it['name']}">
       <h2>{e(it['title'])}</h2>
-      <p class="meta">Slide {it['slide']}{' · ' + e(case_label(it)) if case_label(it) else ''} · <a href="#{it['name']}">#{it['name']}</a></p>
+      <p class="meta">{e(case_label(it)) + ' · ' if case_label(it) else ''}<a href="#{it['name']}">#{it['name']}</a></p>
       <img src="gifs/{it['name']}.gif" alt="{e(it['alt'] or it['title'])}" loading="lazy">
     </section>""" for it in items)
     page = f"""<!doctype html>
@@ -167,7 +167,6 @@ def write_page(items):
     nav ol {{ margin: 0 0 8px; padding-left: 22px; }}
     nav li {{ margin: 4px 0; }}
     a {{ color: var(--blue); }}
-    .slide {{ color: #5B6B80; font-size: .85rem; }}
     section {{ border-top: 1px solid var(--rule); padding-top: 24px; margin-top: 28px; scroll-margin-top: 12px; }}
     section h2 {{ color: var(--navy); font-size: 1.3rem; margin: 0; border-left: 4px solid var(--blue); padding-left: 10px; }}
     .meta {{ margin: 6px 0 14px; color: #5B6B80; font-size: .9rem; }}

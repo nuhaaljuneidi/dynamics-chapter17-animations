@@ -2,7 +2,7 @@
 
 Animated GIFs from the Chapter 17 (Planar Kinematics of Rigid Bodies) lecture slides, one section per animation.
 
-Site: https://nuhaaljuneidi.github.io/dynamics-animations/
+Site: https://nuhaaljuneidi.github.io/dynamics-chapter17-animations/
 
 Each animation has its own link, for example `#problem12` or `#ic-cases-rolling`.
 

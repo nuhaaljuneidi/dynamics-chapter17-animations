@@ -27,7 +27,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 DEFAULT_DECK = HERE.parent.parent / "PPT" / "Dynamics_Chap17_PlanarKinematicsOfRigidBodies.pptx"
 GIF_DIR = HERE / "gifs"
-PAGE_TITLE = "Dynamics Chapter 17: Planar Kinematics of Rigid Bodies – Animations"
+GA_ID = "G-M3V744VBMY"  # same Google Analytics property as the other teaching tools
+PAGE_TITLE ="Dynamics Chapter 17: Planar Kinematics of Rigid Bodies – Animations"
 
 # Hand-picked names, keyed by (slide title, picture name in PowerPoint).
 # Any GIF not listed here gets an automatic name from auto_name().
@@ -152,6 +153,14 @@ def write_page(items):
     page = f"""<!doctype html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', '{GA_ID}');
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{e(PAGE_TITLE)}</title>

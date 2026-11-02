@@ -40,6 +40,8 @@ NAMES = {
     ("Three Problem Types: What Do You Know About B?", "Anim Linkage"): "problem-types-linkage",
     ("The Instantaneous Center (IC)", "Anim IC rotation"): "ic-rotation",
     ("Locating the IC", "Anim Locate IC"): "locating-ic",
+    ("Locating the IC: parallel velocities", "Anim Case 2"): "ic-parallel-case2",
+    ("Locating the IC: parallel velocities", "Anim Case 3"): "ic-parallel-case3",
     ("Rolling Without Slipping", "Anim Rolling wheel"): "rolling-without-slipping",
     ("Rolling Wheels and the IC", "Anim Wheel IC"): "rolling-wheel-ic",
     ("Same Three Problem Types: Where Is the IC?", "Anim IC surfaces"): "ic-cases-surfaces",

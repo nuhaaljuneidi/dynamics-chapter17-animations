@@ -173,6 +173,7 @@ def write_page(items):
     header {{ background: var(--navy); color: #fff; padding: 28px 16px; }}
     header h1 {{ margin: 0 auto; max-width: 900px; font-size: 1.6rem; }}
     header p {{ margin: 8px auto 0; max-width: 900px; color: #C9D6E6; }}
+    header .author {{ display: block; color: #fff; font-size: 1.35rem; font-weight: bold; }}
     main {{ max-width: 900px; margin: 0 auto; padding: 24px 16px 48px; }}
     nav h2 {{ font-size: 1.1rem; margin: 0 0 8px; }}
     nav ol {{ margin: 0 0 8px; padding-left: 22px; }}
@@ -189,7 +190,7 @@ def write_page(items):
 <body>
   <header>
     <h1>{e(PAGE_TITLE)}</h1>
-    <p>Dr. Nuha Aljuneidi, Dynamics, ERAU</p>
+    <p><span class="author">Dr. Nuha Aljuneidi</span>Dynamics, ERAU</p>
   </header>
   <main>
     <nav>

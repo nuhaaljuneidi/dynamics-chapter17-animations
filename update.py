@@ -30,6 +30,8 @@ DEFAULT_DECK = HERE.parent.parent / "PPT" / "Dynamics_Chap17_PlanarKinematicsOfR
 GIF_DIR = HERE / "gifs"
 GA_ID = "G-M3V744VBMY"  # same Google Analytics property as the other teaching tools
 PAGE_TITLE ="Dynamics Chapter 17: Planar Kinematics of Rigid Bodies – Animations"
+PAGE_DESC = "Animations from the Chapter 17 lecture slides: rigid-body motion, instantaneous centers, rolling, and worked problems. By Dr. Nuha Aljuneidi."
+SITE_URL = "https://nuhaaljuneidi.github.io/dynamics-chapter17-animations/"
 
 # Hand-picked names, keyed by (slide title, picture name in PowerPoint).
 # Any GIF not listed here gets an automatic name from auto_name().
@@ -167,6 +169,13 @@ def write_page(items):
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{e(PAGE_TITLE)}</title>
+  <meta name="description" content="{e(PAGE_DESC)}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dr. Nuha Aljuneidi">
+  <meta property="og:title" content="{e(PAGE_TITLE)}">
+  <meta property="og:description" content="{e(PAGE_DESC)}">
+  <meta property="og:url" content="{SITE_URL}">
+  <meta name="twitter:card" content="summary">
   <style>
     :root {{ --navy: #10243E; --blue: #0070C0; --rule: #D5DCE5; }}
     * {{ box-sizing: border-box; }}

@@ -176,6 +176,7 @@ def write_page(items):
   <meta property="og:description" content="{e(PAGE_DESC)}">
   <meta property="og:url" content="{SITE_URL}">
   <meta name="twitter:card" content="summary">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <style>
     :root {{ --navy: #10243E; --blue: #0070C0; --rule: #D5DCE5; }}
     * {{ box-sizing: border-box; }}

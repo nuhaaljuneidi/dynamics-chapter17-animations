@@ -50,6 +50,9 @@ NAMES = {
     ("Same Three Problem Types: Where Is the IC?", "Anim IC surfaces"): "ic-cases-surfaces",
     ("Same Three Problem Types: Where Is the IC?", "Anim IC rolling"): "ic-cases-rolling",
     ("Same Three Problem Types: Where Is the IC?", "Anim IC linkage"): "ic-cases-linkage",
+    ("Same Three Problem Types, Now for Acceleration", "Anim Fixed pin"): "accel-cases-pin",
+    ("Same Three Problem Types, Now for Acceleration", "Anim Surfaces"): "accel-cases-surfaces",
+    ("Same Three Problem Types, Now for Acceleration", "Anim Linkage"): "accel-cases-linkage",
 }
 
 STOPWORDS = {"a", "an", "and", "the", "of", "to", "vs", "is", "its", "it", "on", "in",

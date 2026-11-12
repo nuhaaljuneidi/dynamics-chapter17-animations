@@ -55,6 +55,7 @@ NAMES = {
     ("Same Three Problem Types, Now for Acceleration", "Anim Surfaces"): "accel-cases-surfaces",
     ("Same Three Problem Types, Now for Acceleration", "Anim Linkage"): "accel-cases-linkage",
     ("Glued or Sliding? Ask This First", "Anim Glued vs sliding"): "glued-vs-sliding",
+    ("When the Two Points Are on Different Bodies", "Anim Slot pin"): "pin-in-slot",
 }
 
 STOPWORDS = {"a", "an", "and", "the", "of", "to", "vs", "is", "its", "it", "on", "in",

@@ -7,6 +7,7 @@ Usage:
 What it does:
     1. Finds every animated GIF in the deck (ppt/media) and the slide it is on
        (via the slide .rels files), in slide order.
+    Hidden slides are skipped.
     2. Names each GIF from its slide title (see NAMES and auto_name below) and
        writes it to gifs/<name>.gif. GIFs no longer in the deck are removed.
     3. Writes index.html with one section per GIF, anchored by its name.
@@ -53,6 +54,7 @@ NAMES = {
     ("Same Three Problem Types, Now for Acceleration", "Anim Fixed pin"): "accel-cases-pin",
     ("Same Three Problem Types, Now for Acceleration", "Anim Surfaces"): "accel-cases-surfaces",
     ("Same Three Problem Types, Now for Acceleration", "Anim Linkage"): "accel-cases-linkage",
+    ("Glued or Sliding? Ask This First", "Anim Glued vs sliding"): "glued-vs-sliding",
 }
 
 STOPWORDS = {"a", "an", "and", "the", "of", "to", "vs", "is", "its", "it", "on", "in",
@@ -113,6 +115,8 @@ def read_deck(deck):
         if not gif_rels:
             continue
         xml = z.read(part).decode("utf-8")
+        if re.search(r'<p:sld\b[^>]*\bshow="(0|false)"', xml):
+            continue  # hidden slide: not published
         title = slide_title(xml) or f"Slide {number}"
         pics = []
         for pic in re.findall(r"<p:pic>.*?</p:pic>", xml, re.S):
